@@ -1,0 +1,10 @@
+@media screen and (max-width: 768px) {
+    * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#44A49B;
+        font-size: 30px;
+        font-weight: bold;
+    }
+} 
