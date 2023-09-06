@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { InicialAdmComponent } from './components/paginas/inicial-adm/inicial-adm.component';
+import { InicialCozinhaComponent } from './components/paginas/inicial-cozinha/inicial-cozinha.component';
+import { InicialGarconComponent } from './components/paginas/inicial-garcon/inicial-garcon.component';
+import { LoginComponent } from './components/paginas/login/login.component';
+import { PedidosEmAndamentoComponent } from './components/paginas/pedidos-em-andamento/pedidos-em-andamento.component';
+import { PedidosConcluidosComponent } from './components/paginas/pedidos-concluidos/pedidos-concluidos.component';
+const routes: Routes = [
+  { path: '', component: LoginComponent },
+  { path: 'inicial-adm', component: InicialAdmComponent },
+  { path: 'inicial-cozinha', component: InicialCozinhaComponent },
+  { path: 'inicial-garcon', component: InicialGarconComponent },
+  { path: 'pedidos-em-andamento', component: PedidosEmAndamentoComponent },
+  { path: 'pedidos-concluidos', component: PedidosConcluidosComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,11 +1,12 @@
 <div>
-    <title> Olá Garçon! </title>
-        <p>Selecione uma opção:</p>
-        <div class="cafe-almoco">
-            <app-botao-enviar [textoDoBotao]="'Café da Manhã'"></app-botao-enviar>
-            <app-botao-enviar [textoDoBotao]="'Almoço'"></app-botao-enviar>
-        </div>
+    <title>Olá Garçon!</title>
+    <p>Selecione uma opção:</p>
+    <div class="cafe-almoco">
+        <app-botao-enviar (click)="navigateTo('/menu-cafe-da-manha')"
+            [textoDoBotao]="'Café da Manhã'"></app-botao-enviar>
+        <app-botao-enviar (click)="navigateTo('/menu-almoco')" [textoDoBotao]="'Almoço'"></app-botao-enviar>
+    </div>
 
-    <app-titulo [textoDoBotao]="'Pedidos Realizados'"></app-titulo>
-    <app-titulo [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
+    <app-titulo (click)="navigateTo('/pedidos-em-andamento')" [textoDoBotao]="'Pedidos em Andamento'"></app-titulo>
+    <app-titulo (click)="navigateTo('/pedidos-concluidos')" [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
 </div>

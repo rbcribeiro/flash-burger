@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicial-cozinha',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicial-cozinha.component.css']
 })
 export class InicialCozinhaComponent {
+  constructor(private router: Router) { }
 
+  public navigateTo(route: string): void {
+    this.router.navigate([route]);
+  }
 }
