@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './service/interceptor';
+import { JwtModule } from '@auth0/angular-jwt'; 
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -36,14 +43,29 @@ import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabe
     InputComponent,
     TituloComponent,
     TabelaFuncionariosComponent,
-    TabelaItensMenuComponent
+    TabelaItensMenuComponent,
+
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem('access_token'),
+        allowedDomains: ['http://localhost:4200/'], 
+      },
+    }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
-@media screen and (max-width: 768px) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: #100712;
-        
-    }
-} 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #100712;
+
+}
+
+@media screen and (mix-width: 768px) {}

@@ -1,5 +1,7 @@
 <div>
     <title> Olá Chef! </title>
-    <app-titulo [textoDoBotao]="'Pedidos Realizados'"></app-titulo>
-    <app-titulo [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
-</div>
+    <p>Selecione uma opção:</p>
+    <div class="nav">
+    <app-titulo (click)="navigateTo('/pedidos-em-andamento')" [textoDoBotao]="'Pedidos em Andamento'"></app-titulo>
+    <app-titulo (click)="navigateTo('/pedidos-concluidos')" [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
+</div></div>

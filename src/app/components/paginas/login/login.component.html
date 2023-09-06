@@ -1,6 +1,9 @@
-<div>
-    <img [src]="imageUrl" alt="Minha Imagem">
-    <app-input [placeholder]="email"></app-input>
-    <app-input [placeholder]="senha"></app-input>
-    <app-botao-enviar></app-botao-enviar>
-</div>
+<form (ngSubmit)="login()">
+    <div>
+      <img [src]="imageUrl" alt="Minha Imagem">
+      <app-input [(ngModel)]="requestLogin.email" [ngModelOptions]="{ standalone: true }" placeholder="Digite seu email"></app-input>
+      <app-input [(ngModel)]="requestLogin.password" [ngModelOptions]="{ standalone: true }" type="password" placeholder="Digite sua senha"></app-input>
+      <app-botao-enviar [textoDoBotao]="'ENVIAR'" type="submit"></app-botao-enviar>
+    </div>
+  </form>
+  

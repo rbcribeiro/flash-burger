@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-almoco',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-almoco.component.css']
 })
 export class MenuAlmocoComponent {
-
+  // @Input() MESA Nº: string = '';
 }

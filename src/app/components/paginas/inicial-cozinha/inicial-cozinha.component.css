@@ -1,16 +1,23 @@
-@media screen and (max-width: 768px) {
-    * { 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    div {
-        margin-top: 120px;
-    }
-    title {
-        color:#44A49B;
-        ;
-    }
+* { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+div {
+    margin-top: 40px;
+}
+
+.nav {
+    margin: 80px 3px 3px 3px;
+}
+
+title, p {
+    color: #44A49B;
+    font-size: 30px;
+}
+
+@media screen and (mix-width: 768px) {
+
 
 }

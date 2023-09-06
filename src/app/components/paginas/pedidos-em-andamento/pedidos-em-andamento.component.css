@@ -1,0 +1,16 @@
+* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div {
+    margin-top: 120px;
+}
+
+title {
+    color: #44a49b;
+}
+
+@media screen and (mix-width: 768px) {}

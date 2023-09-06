@@ -1,18 +1,25 @@
-@media screen and (max-width: 768px) {
-    * { 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    div {
-        margin-top: 120px;
-    }
+* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-    .cafe-almoco {
-        flex-direction: row;
-        gap: 5px;
-        
-    }
+div {
+    margin-top: 40px;
+}
+
+.cafe-almoco {
+    margin: 80px 3px 3px 3px;
+
+    flex-direction: row;
+    gap: 6px;
 
 }
+
+title, p {
+    color: #44A49B;
+    font-size: 30px;
+}
+
+@media screen and (mix-width: 768px) {}

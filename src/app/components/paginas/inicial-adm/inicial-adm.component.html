@@ -1,7 +1,10 @@
 <div>
     <title> Olá Admin! </title>
-    <app-titulo [textoDoBotao]="'Funcionários'"></app-titulo>
-    <app-titulo [textoDoBotao]="'Itens do Menu'"></app-titulo>
-    <app-titulo [textoDoBotao]="'Pedidos Realizados'"></app-titulo>
-    <app-titulo [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
+    <p>Selecione uma opção:</p>
+    <div class="nav">
+        <app-titulo (click)="navigateTo('/funcionarios')" [textoDoBotao]="'Funcionários'"></app-titulo>
+        <app-titulo (click)="navigateTo('/menu')" [textoDoBotao]="'Itens do Menu'"></app-titulo>
+        <app-titulo (click)="navigateTo('/pedidos-em-andamento')" [textoDoBotao]="'Pedidos em Andamento'"></app-titulo>
+        <app-titulo (click)="navigateTo('/pedidos-concluidos')" [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
+    </div>
 </div>
