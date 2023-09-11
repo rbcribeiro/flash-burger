@@ -9,8 +9,8 @@ import { PedidosConcluidosComponent } from './components/paginas/pedidos-conclui
 import { ResumoPedidoComponent } from './components/paginas/resumo-pedido/resumo-pedido.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'inicial-adm', component: InicialAdmComponent },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },  { path: 'inicial-adm', component: InicialAdmComponent },
   { path: 'inicial-cozinha', component: InicialCozinhaComponent },
   { path: 'inicial-garcon', component: InicialGarconComponent },
   { path: 'pedidos-em-andamento', component: PedidosEmAndamentoComponent },
