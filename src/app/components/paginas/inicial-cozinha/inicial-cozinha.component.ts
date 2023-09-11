@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicial-cozinha.component.css']
 })
 export class InicialCozinhaComponent {
+  imageUrl: string = '../../../assets/logo-flash-burger.png';
+
   constructor(private router: Router) { }
 
   public navigateTo(route: string): void {

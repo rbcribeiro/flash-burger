@@ -6,6 +6,8 @@ import { InicialGarconComponent } from './components/paginas/inicial-garcon/inic
 import { LoginComponent } from './components/paginas/login/login.component';
 import { PedidosEmAndamentoComponent } from './components/paginas/pedidos-em-andamento/pedidos-em-andamento.component';
 import { PedidosConcluidosComponent } from './components/paginas/pedidos-concluidos/pedidos-concluidos.component';
+import { ResumoPedidoComponent } from './components/paginas/resumo-pedido/resumo-pedido.component';
+
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'inicial-adm', component: InicialAdmComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'inicial-garcon', component: InicialGarconComponent },
   { path: 'pedidos-em-andamento', component: PedidosEmAndamentoComponent },
   { path: 'pedidos-concluidos', component: PedidosConcluidosComponent },
+  { path: 'resumo-pedido', component: ResumoPedidoComponent },
+
 ];
 
 @NgModule({

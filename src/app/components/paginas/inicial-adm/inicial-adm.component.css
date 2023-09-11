@@ -8,13 +8,9 @@
 div {
     margin-top: 40px;
 }
+
 .nav {
     margin: 80px 3px 3px 3px;
-}
-
-title, p {
-    color: #44A49B;
-    font-size: 30px;
 }
 
 @media screen and (mix-width: 768px) {}

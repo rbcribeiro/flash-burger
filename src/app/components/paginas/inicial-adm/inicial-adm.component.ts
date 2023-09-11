@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicial-adm.component.css']
 })
 export class InicialAdmComponent {
+  imageUrl: string = '../../../assets/logo-flash-burger.png';
+
 
   constructor(private router: Router) { }
 
