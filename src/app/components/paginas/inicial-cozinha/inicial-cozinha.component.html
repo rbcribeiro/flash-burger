@@ -2,6 +2,8 @@
     <title> Olá Chef! </title>
     <p>Selecione uma opção:</p>
     <div class="nav">
-    <app-titulo (click)="navigateTo('/pedidos-em-andamento')" [textoDoBotao]="'Pedidos em Andamento'"></app-titulo>
-    <app-titulo (click)="navigateTo('/pedidos-concluidos')" [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
-</div></div>
+        <app-titulo (click)="navigateTo('/pedidos-em-andamento')" [textoDoBotao]="'Pedidos em Andamento'"></app-titulo>
+        <app-titulo (click)="navigateTo('/pedidos-concluidos')" [textoDoBotao]="'Pedidos Concluídos'"></app-titulo>
+    </div>
+    <img [src]="imageUrl" alt="Minha Imagem" class="img-inicial">
+</div>

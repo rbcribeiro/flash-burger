@@ -1,4 +1,4 @@
-* {
+/* * {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,6 +6,7 @@
     font-size: 30px;
     font-weight: bold;
     
-}
+} */
+
 
 @media screen and (mix-width: 768px) {}

@@ -11,15 +11,10 @@ div {
 
 .cafe-almoco {
     margin: 80px 3px 3px 3px;
-
     flex-direction: row;
     gap: 6px;
-
 }
 
-title, p {
-    color: #44A49B;
-    font-size: 30px;
-}
+
 
 @media screen and (mix-width: 768px) {}

@@ -9,7 +9,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root',
 })
 export class AuthService {
-  apiUrl = 'http://localhost:8080/auth';
+  apiUrl = 'https://flash-burger-api.vercel.app/';
 
   httpOptions = {
     headers: new HttpHeaders({

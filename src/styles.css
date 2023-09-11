@@ -3,7 +3,17 @@
     margin: 0;
     padding: 0;
     background-color: #100712;
+}
 
+title, p {
+    color: #44A49B;
+    font-size: 30px;
+}
+
+.img-inicial {
+    position: fixed;
+    width: 200px;
+    margin-top: 650px;
 }
 
 @media screen and (mix-width: 768px) {}

@@ -1,4 +1,4 @@
-import {Component, forwardRef, OnInit} from "@angular/core";
+import {Component, forwardRef, Input,  OnInit} from "@angular/core";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
@@ -13,6 +13,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 })
 export class InputComponent implements ControlValueAccessor {
+  @Input() placeholder: string = '';
   value: number = 0;
   onChange: (_: any) => void = (_: any) => {};
   onTouched: () => void = () => {};

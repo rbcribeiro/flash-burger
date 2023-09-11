@@ -55,7 +55,7 @@ import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabe
     JwtModule.forRoot({
       config: {
         tokenGetter: () => localStorage.getItem('access_token'),
-        allowedDomains: ['http://localhost:4200/'], 
+        allowedDomains: ['https://flash-burger-api.vercel.app/'], 
       },
     }),
   ],
