@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "dist" 
+
+[build.environment]
+  # Configuração para gerar o arquivo _redirects
+  NG_CLI_ANALYTICS = "false" 
+  NETLIFY_ANGULAR_ROUTER = "true"
+
+# Redireciona todas as rotas para o arquivo index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
