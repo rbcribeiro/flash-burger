@@ -11,13 +11,15 @@ import { ControleFuncionariosComponent } from './components/paginas/controle-fun
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },  { path: 'inicial-adm', component: InicialAdmComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },  
+  { path: 'inicial-adm', component: InicialAdmComponent },
   { path: 'inicial-cozinha', component: InicialCozinhaComponent },
   { path: 'inicial-garcon', component: InicialGarconComponent },
   { path: 'pedidos-em-andamento', component: PedidosEmAndamentoComponent },
   { path: 'pedidos-concluidos', component: PedidosConcluidosComponent },
   { path: 'resumo-pedido', component: ResumoPedidoComponent },
   { path: 'controle-funcionarios', component: ControleFuncionariosComponent },
+
 
 
 ];
