@@ -1,0 +1,13 @@
+* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #44A49B;
+    font-size: 30px;
+    font-weight: bold;
+    flex-direction: column;
+    
+}
+.titulo {
+    margin: 120px 0 60px 0;
+}
