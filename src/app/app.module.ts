@@ -26,6 +26,7 @@ import { InputComponent } from './components/componentes-em-comum/input/input.co
 import { TituloComponent } from './components/componentes-em-comum/titulo/titulo.component';
 import { TabelaFuncionariosComponent } from './components/componentes-em-comum/tabela-funcionarios/tabela-funcionarios.component';
 import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabela-itens-menu/tabela-itens-menu.component';
+import { ControleFuncionariosComponent } from './components/paginas/controle-funcionarios/controle-funcionarios.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabe
     TituloComponent,
     TabelaFuncionariosComponent,
     TabelaItensMenuComponent,
+    ControleFuncionariosComponent,
 
   ],
   imports: [

@@ -9,7 +9,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root',
 })
 export class AuthService {
-  apiUrl = 'https://flash-burger-api.vercel.app/';
+  baseUrl = 'https://flash-burger-api.vercel.app';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -25,9 +25,9 @@ export class AuthService {
 
     login(email: string, password: string): Observable<{ token: string }> {
       const requestBody = { email, password };
-      return this.httpClient.post<{ token: string }>(`${this.apiUrl}`, requestBody, this.httpOptions).pipe(
+      return this.httpClient.post<{ token: string }>(`${this.baseUrl}/auth`, requestBody, this.httpOptions).pipe(
         tap((response: { token: string }) => {
-          const token = response.token; 
+          const token = response.token;
     
           console.log('Token JWT recebido do servidor:', token);
     
@@ -37,16 +37,18 @@ export class AuthService {
     
           if (decodedToken && decodedToken.role) {
             this.userRole = decodedToken.role;
+            console.log('Função do usuário:', this.userRole);
           } else {
             this.userRole = null;
           }
         }),
         catchError((error) => {
           console.error('Erro durante o login:', error);
-          throw error; 
+          throw error;
         })
       );
     }
+    
     
   getUserRole(): string | null {
     return this.userRole;

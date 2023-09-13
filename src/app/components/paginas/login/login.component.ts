@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         }),
         catchError((error) => {
           console.error('Erro durante o login:', error);
-          return of(null); 
+          return of(null);
         })
       )
       .subscribe();

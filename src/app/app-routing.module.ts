@@ -7,6 +7,7 @@ import { LoginComponent } from './components/paginas/login/login.component';
 import { PedidosEmAndamentoComponent } from './components/paginas/pedidos-em-andamento/pedidos-em-andamento.component';
 import { PedidosConcluidosComponent } from './components/paginas/pedidos-concluidos/pedidos-concluidos.component';
 import { ResumoPedidoComponent } from './components/paginas/resumo-pedido/resumo-pedido.component';
+import { ControleFuncionariosComponent } from './components/paginas/controle-funcionarios/controle-funcionarios.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'pedidos-em-andamento', component: PedidosEmAndamentoComponent },
   { path: 'pedidos-concluidos', component: PedidosConcluidosComponent },
   { path: 'resumo-pedido', component: ResumoPedidoComponent },
+  { path: 'controle-funcionarios', component: ControleFuncionariosComponent },
+
 
 ];
 
