@@ -1,11 +1,11 @@
 <app-titulo [textoDoBotao]="'Funcionários'" class="titulo"></app-titulo>
 
 <app-input [(ngModel)]="requestCadastroFuncionario.name" [ngModelOptions]="{ standalone: true }" placeholder="Digite o nome" name="name"></app-input>
-<app-input [(ngModel)]="requestCadastroFuncionario.email" [ngModelOptions]="{ standalone: true }" placeholder="digite o e-mail" name="email"></app-input>
-<app-input [(ngModel)]="requestCadastroFuncionario.password" [ngModelOptions]="{ standalone: true }"placeholder="digite a senha" name="password"></app-input>
-<app-input [(ngModel)]="requestCadastroFuncionario.role" [ngModelOptions]="{ standalone: true }" placeholder="digite o cargo" name="role"></app-input>
+<app-input [(ngModel)]="requestCadastroFuncionario.email" [ngModelOptions]="{ standalone: true }" placeholder="Digite o e-mail" name="email"></app-input>
+<app-input [(ngModel)]="requestCadastroFuncionario.password" [ngModelOptions]="{ standalone: true }"placeholder="Digite a senha" name="password"></app-input>
+<app-input [(ngModel)]="requestCadastroFuncionario.role" [ngModelOptions]="{ standalone: true }" placeholder="Digite o cargo" name="role"></app-input>
 
-<app-botao-enviar [textoDoBotao]="'CADASTRAR'" type="submit"></app-botao-enviar>
+<app-botao-enviar [textoDoBotao]="'CADASTRAR'" (click)="cadastrarFuncionario()"></app-botao-enviar>
 
 <app-tabela-funcionarios></app-tabela-funcionarios>
 

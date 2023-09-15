@@ -1,19 +1,27 @@
 <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Tipo</th>
-            <th>Item e Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-    <!-- <tr *ngFor="let employee of employees">
-        <td>{{ employee.id }}</td>
-        <td>{{ employee.tipo }}</td>
-        <td>
-          {{ employee.item }}<br>
-          {{ employee.valor }}
-        </td>
-      </tr> -->
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Tipo</th>
+      <th>Item</th>
+      <th>Preço</th>
+      <th>Ilustração</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngIf="tabelaItens.length > 0; else loading">
+      <tr *ngFor="let item of tabelaItens; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.name }} </td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.image }}</td>
+      </tr>
+    </ng-container>
+    <ng-template #loading>
+      <tr>
+        <td colspan="5">Carregando...</td>
+      </tr>
+    </ng-template>
   </tbody>
 </table>

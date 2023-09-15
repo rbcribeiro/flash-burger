@@ -8,6 +8,10 @@ import { PedidosEmAndamentoComponent } from './components/paginas/pedidos-em-and
 import { PedidosConcluidosComponent } from './components/paginas/pedidos-concluidos/pedidos-concluidos.component';
 import { ResumoPedidoComponent } from './components/paginas/resumo-pedido/resumo-pedido.component';
 import { ControleFuncionariosComponent } from './components/paginas/controle-funcionarios/controle-funcionarios.component';
+import { ControleItensComponent } from './components/paginas/controle-itens/controle-itens.component';
+
+import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabela-itens-menu/tabela-itens-menu.component'
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,8 +23,9 @@ const routes: Routes = [
   { path: 'pedidos-concluidos', component: PedidosConcluidosComponent },
   { path: 'resumo-pedido', component: ResumoPedidoComponent },
   { path: 'controle-funcionarios', component: ControleFuncionariosComponent },
+  { path: 'controle-itens', component: ControleItensComponent },
 
-
+  { path: 'tabela-itens-menu', component: TabelaItensMenuComponent },
 
 ];
 

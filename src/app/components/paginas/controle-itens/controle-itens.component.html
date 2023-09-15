@@ -1,0 +1,10 @@
+<app-titulo [textoDoBotao]="'Itens'" class="titulo"></app-titulo>
+
+<app-input [(ngModel)]="requestCadastroProduto.name" [ngModelOptions]="{ standalone: true }" placeholder="Digite o nome" name="name"></app-input>
+<app-input [(ngModel)]="requestCadastroProduto.type" [ngModelOptions]="{ standalone: true }" placeholder="Digite o e-mail" name="email"></app-input>
+<app-input [(ngModel)]="requestCadastroProduto.price" [ngModelOptions]="{ standalone: true }"placeholder="Digite a senha" name="password"></app-input>
+<app-input [(ngModel)]="requestCadastroProduto.image" [ngModelOptions]="{ standalone: true }" placeholder="Digite o cargo" name="role"></app-input>
+
+<app-botao-enviar [textoDoBotao]="'CADASTRAR'" (click)="cadastrarItem()"></app-botao-enviar>
+
+<app-tabela-itens-menu></app-tabela-itens-menu>
