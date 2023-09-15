@@ -6,6 +6,10 @@
     font-size: 30px;
     font-weight: bold;
     flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
     
 }
 

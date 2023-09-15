@@ -58,6 +58,19 @@ export class AuthService {
     return localStorage.getItem('access_token');
   }
 
+  isTokenValid(token: string | null): boolean {
+    if (!token) {
+      return false;
+    }
+
+    try {
+      return !this.jwtHelper.isTokenExpired(token);
+    } catch (error) {
+      console.error('Erro ao verificar a validade do token:', error);
+      return false;
+    }
+  }
+
   logout(): void {
     localStorage.removeItem('access_token');
     this.userRole = null;
