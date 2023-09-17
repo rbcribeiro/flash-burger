@@ -1,0 +1,4 @@
+<select [(ngModel)]="selectedValue" (ngModelChange)="onValueChange()" class="custom-select">
+  <option [value]="null" disabled [selected]="true">{{ placeholder }}</option>
+  <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+</select>

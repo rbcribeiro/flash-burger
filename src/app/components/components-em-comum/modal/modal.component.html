@@ -1,0 +1,10 @@
+<div class="modal" *ngIf="modalAberto">
+  <div class="modal-overlay" [ngClass]="{ 'aberto': modalAberto }"> 
+    <div class="modal-content">
+      <h2>{{ modalTitle }}</h2>
+      <p>{{ modalBody }}</p>
+      <p>{{ modalBody2 }}</p>
+      <button (click)="fecharModal()">X</button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<app-titulo [textoDoBotao]="'Funcionários'" class="titulo"></app-titulo>
+<app-titulo [textoDoBotao]="'Novo Funcionario'" class="titulo"></app-titulo>
 
 <app-input [(ngModel)]="requestCadastroFuncionario.name" [ngModelOptions]="{ standalone: true }" placeholder="Digite o nome" name="name"></app-input>
 <app-input [(ngModel)]="requestCadastroFuncionario.email" [ngModelOptions]="{ standalone: true }" placeholder="Digite o e-mail" name="email"></app-input>
@@ -7,7 +7,12 @@
 
 <app-botao-enviar [textoDoBotao]="'CADASTRAR'" (click)="cadastrarFuncionario()"></app-botao-enviar>
 
-<app-tabela-funcionarios></app-tabela-funcionarios>
+<app-titulo [textoDoBotao]="'Funcionários'" class="titulo2"></app-titulo>
 
+<ul>
+    <li *ngFor="let usuario of usuarios" (click)="abrirModal(usuario)" class="listaFuncionarios">{{ usuario.role}} - {{usuario.name }}</li>
+</ul>
+
+<app-modal [modalTitle]="modalTitle" [modalBody]="modalBody" [modalBody2]="modalBody2" [modalAberto]="modalAberto"></app-modal>
 
 
