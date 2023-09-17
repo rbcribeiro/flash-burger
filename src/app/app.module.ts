@@ -28,6 +28,7 @@ import { TabelaItensMenuComponent } from './components/components-em-comum/tabel
 import { ControleFuncionariosComponent } from './components/paginas/controle-funcionarios/controle-funcionarios.component';
 import { ControleItensComponent } from './components/paginas/controle-itens/controle-itens.component';
 import { ModalComponent } from './components/components-em-comum/modal/modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ModalComponent } from './components/components-em-comum/modal/modal.com
         allowedDomains: ['https://flash-burger-api.vercel.app/'], 
       },
     }),
+    BrowserAnimationsModule,
   ],
   providers: [
     {
