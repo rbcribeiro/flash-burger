@@ -11,3 +11,15 @@
 .titulo {
     margin: 120px 0 60px 0;
 }
+.titulo2 {
+    margin: 40px 0 15px 0;
+}
+
+.listaFuncionarios{
+background-color: white;    
+width: 330px;
+border-radius: 5px;
+border: 2px solid #100712;
+font-size: 20px;
+height: 50px;
+}

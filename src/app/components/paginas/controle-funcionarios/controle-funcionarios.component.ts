@@ -1,8 +1,9 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { UsersService } from '../../../service/users/users.service';
 import { AuthService } from '../../../service/auth/auth.service';
-
 import { User } from '../../../models/user.model';
+import { ModalComponent } from '../../components-em-comum/modal/modal.component'; 
+
 
 @Component({
   selector: 'app-controle-funcionarios',
@@ -10,6 +11,13 @@ import { User } from '../../../models/user.model';
   styleUrls: ['./controle-funcionarios.component.css']
 })
 export class ControleFuncionariosComponent {
+  modalTitle: string = "";
+  modalBody: string = "";
+  modalBody2: string = ""; 
+  modalAberto: boolean = false;
+  usuarios: User[] = []; 
+
+
   requestCadastroFuncionario = {
     name: '',
     email: '',
@@ -24,13 +32,31 @@ export class ControleFuncionariosComponent {
     role: ''
   };
   
-  
-  
-
   constructor(private userService: UsersService, private authService: AuthService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.isAdmin = this.authService.getUserRole() === 'admin';
+    this.userService.getAllUsers().subscribe(
+      (users: User[]) => {
+        if (users && users.length > 0) {
+          this.usuarios = users; 
+        }
+      },
+      error => {
+        console.error('Erro ao obter usuários', error);
+      }
+    );
+  }
+
+  abrirModal(usuario: User) {
+    this.modalTitle = `${usuario.name}`;
+    this.modalBody = `${usuario.email}`; 
+    this.modalBody2 = `Cargo: ${usuario.role}`;
+    this.modalAberto = true; 
+  }
+
+  fecharModal() {
+    this.modalAberto = false; 
   }
 
   cadastrarFuncionario() {
@@ -53,7 +79,6 @@ export class ControleFuncionariosComponent {
               role: ''
             };
   
-            // Forçar a detecção de mudanças para atualizar a tabela
             this.cdr.detectChanges();
           } else {
             console.error('Resposta do servidor está incompleta após o cadastro');
@@ -64,5 +89,6 @@ export class ControleFuncionariosComponent {
         }
       );
   }
-  
+
+
 }

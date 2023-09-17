@@ -6,8 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './service/interceptor';
 import { JwtModule } from '@auth0/angular-jwt'; 
-
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,13 +20,14 @@ import { ResumoPedidoComponent } from './components/paginas/resumo-pedido/resumo
 import { PedidosConcluidosComponent } from './components/paginas/pedidos-concluidos/pedidos-concluidos.component';
 import { LoginComponent } from './components/paginas/login/login.component';
 import { PedidosEmAndamentoComponent } from './components/paginas/pedidos-em-andamento/pedidos-em-andamento.component';
-import { BotaoEnviarComponent } from './components/componentes-em-comum/botao-enviar/botao-enviar.component';
-import { InputComponent } from './components/componentes-em-comum/input/input.component';
-import { TituloComponent } from './components/componentes-em-comum/titulo/titulo.component';
-import { TabelaFuncionariosComponent } from './components/componentes-em-comum/tabela-funcionarios/tabela-funcionarios.component';
-import { TabelaItensMenuComponent } from './components/componentes-em-comum/tabela-itens-menu/tabela-itens-menu.component';
+import { BotaoEnviarComponent } from './components/components-em-comum/botao-enviar/botao-enviar.component';
+import { InputComponent } from './components/components-em-comum/input/input.component';
+import { TituloComponent } from './components/components-em-comum/titulo/titulo.component';
+import { TabelaFuncionariosComponent } from './components/components-em-comum/tabela-funcionarios/tabela-funcionarios.component';
+import { TabelaItensMenuComponent } from './components/components-em-comum/tabela-itens-menu/tabela-itens-menu.component';
 import { ControleFuncionariosComponent } from './components/paginas/controle-funcionarios/controle-funcionarios.component';
 import { ControleItensComponent } from './components/paginas/controle-itens/controle-itens.component';
+import { ModalComponent } from './components/components-em-comum/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -48,9 +48,12 @@ import { ControleItensComponent } from './components/paginas/controle-itens/cont
     TabelaItensMenuComponent,
     ControleFuncionariosComponent,
     ControleItensComponent,
+    ModalComponent,
+    
 
   ],
   imports: [
+    MatDialogModule,
     CommonModule,
     BrowserModule,
     AppRoutingModule,
